@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login App.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+        <button class="login" onclick="showModal()">Login</button>
+    </div>
+
+
+    <!-- Login Modal -->
+    <div id="modalId" class="modal">
+
+        <form class="modal-content" onsubmit="submitFormLogin()" method="dialog" autocomplete = "off">
+
+            <div class="imgContainer">
+                <span class="close" title="Close Modal" onclick="hideModal()">&times;</span>
+                <img src="avatar.png" alt="avatar" class="avatar">
+            </div>
+
+            <div class="formContainer">
+                <label for="username"><b>Username</b></label>
+                <input type="text" name="username" placeholder="Enter Username"  onchange="getValueLogin(this)" required>
+
+                <label for="password"><b>Password</b></label>
+                <input type="password" name="password" placeholder="Enter Password"  onchange="getValueLogin(this)" required>
+
+                <button type="submit">Login</button>
+
+                <label>
+                    <input type="checkbox" checked="checked">Remember me
+                </label>
+            </div>
+
+            <div class="formContainer" style="background: #f1f1f1">
+                <p> Have not an account yet?
+                    <span class="signup" onclick= "signUpInLogin()">Sign Up</span>
+                </p>
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>
